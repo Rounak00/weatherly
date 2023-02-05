@@ -168,6 +168,11 @@ function App() {
       
       
   }
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      f();
+    }
+  }
   /* useEffect(()=>{
        const fetchAPI=async()=>{
         const url=`https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=${process.env.REACT_APP_SECRET_KEY}`;
@@ -185,7 +190,7 @@ function App() {
        <Heading>Weatherly</Heading> 
        <MainBox>
           <SearchBox>
-             <input style={{padding: "1rem",height: "2rem",backgroundColor: "#D9D9D9",border: "none",boxShadow: "4px 11px 7px -8px rgba(0,0,0,0.75)",borderRadius: "5rem",}} placeholder="Search With City Name" type="Search" onSubmit={f} onChange={(event)=>{setSearch(event.target.value)}} autoComplete="off"></input>
+             <input style={{padding: "1rem",height: "2rem",backgroundColor: "#D9D9D9",border: "none",boxShadow: "4px 11px 7px -8px rgba(0,0,0,0.75)",borderRadius: "5rem",}} placeholder="Search With City Name" type="Search" onKeyDown={handleKeyDown} onChange={(event)=>{setSearch(event.target.value)}} autoComplete="off"></input>
              <FaSearchLocation style={{color:"#55D6F4", marginLeft:"1rem", fontSize:"1.5rem",}} onClick={f}></FaSearchLocation>
           </SearchBox>
 
