@@ -182,7 +182,7 @@ function App() {
     <>
       <ToastContainer/>
       <View>
-       <Heading>Weatherify</Heading> 
+       <Heading>Weatherly</Heading> 
        <MainBox>
           <SearchBox>
              <input style={{padding: "1rem",height: "2rem",backgroundColor: "#D9D9D9",border: "none",boxShadow: "4px 11px 7px -8px rgba(0,0,0,0.75)",borderRadius: "5rem",}} placeholder="Search With City Name" type="Search" onChange={(event)=>{setSearch(event.target.value)}} autoComplete="off"></input>
